@@ -1,6 +1,7 @@
 import React from "react";
 // import socketIO from "socket.io-client";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import Join from "./components/join/Join.jsx";
 import './App.css';
 import {
     createBrowserRouter,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
       path: "/chats",
       element: <ChatPage />,
+    },
+    {
+      path: "/test",
+      element: <Join />,
     },
   ]);
 

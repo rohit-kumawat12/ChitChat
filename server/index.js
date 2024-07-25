@@ -4,9 +4,11 @@ const cors = require("cors");
 // const socketIO = require("socket.io");
 require('dotenv').config();
 const { chats } = require("./data/data");
+const connectDB = require("./config/db");
 
 const app = express();
 const port = process.env.PORT || 4500;
+connectDB();
 
 app.use(cors());
 
