@@ -1,0 +1,62 @@
+.joinPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--myblack);
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.joinContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--myyellow);
+    width: 50%;
+    row-gap: 14px;
+    padding: 4% 0;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+    box-shadow: rgb(0 0 0) 0px 3px 6px, rgb(0 0 0) 0px 3px 6px;
+}
+
+.joinContainer img{
+    width: 20%;
+}
+
+.joinContainer h1{
+    color: var(--myblack);
+    border-bottom: 4px solid var(--myblack);
+    width: 44%;
+    text-align: center;;
+}
+
+.joinContainer input{
+    margin: 0 !important;
+    outline: none;
+    border: none;
+    padding: 1% 2% !important;
+    width: 40%;
+}
+
+.joinContainer button{
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none;
+    border: none;
+    width: 44%;
+    padding: 1% 2% !important;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--myblack);
+}
+
+.joinContainer .joinLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+}
+

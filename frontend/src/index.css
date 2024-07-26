@@ -1,0 +1,20 @@
+:root {
+  --myblack: #161616;
+  --myyellow: #eeba2c;
+  --mywhite: #fcfafa;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  width: 100%;
+  margin: 0 auto;
+}
+
+body{
+  background-color: var(--myblack);
+  margin: 0 auto;
+}
