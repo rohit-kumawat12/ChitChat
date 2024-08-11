@@ -20,7 +20,7 @@ const Join = () => {
                 <div className="joinContainer">
                     {/* <div className="joinLogo"> */}
                         <img src={logo} alt="logo" />
-                        <h1>Chatify</h1>
+                        <h1>Connectify</h1>
                         <input onChange={(e) => setName(e.target.value)} type="text" name="joinInput" id="joinInput" placeholder="Enter your name.."/>
                         <Link onClick={(event)=> !name ? event.preventDefault(): null}  className="joinLink" to="/chat"><button onClick={sendUser}>Login</button></Link>
                     {/* </div> */}
