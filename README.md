@@ -1,4 +1,4 @@
-# ChitChat
+# Connectify
 
 ## Status
 
