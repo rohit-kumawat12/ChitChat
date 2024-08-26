@@ -22,10 +22,10 @@ const MyChats = ({fetchAgain}) => {
             };
 
             const {data} = await axios.get("http://localhost:4500/api/chat",config);
+            // setChats(data);
+            
             if (Array.isArray(data)) {
                 setChats(data);
-            } else if (data) {
-                setChats([data]);
             } else {
                 setChats([]);
             }

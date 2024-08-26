@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FormControl, useDisclosure, Input, useToast, Box, position } from "@chakra-ui/react";
 import { ChatState } from "../../context/ChatProvider";
 import {
@@ -78,10 +78,8 @@ const GroupChatModal = ({children}) => {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((user) => user._id)),
           },config);
-          
         setChats([data, ...chats]);
         onClose();
-
         toast({
           title: "Group Chat Created Successfully",
           status: "success",
@@ -100,10 +98,6 @@ const GroupChatModal = ({children}) => {
       })
     }
   }
-
-  useEffect(() => {
-    console.log("at group create:", chats);
-}, [chats]);
 
     const handleDelete = (deletUser) => {
       setSelectedUsers(selectedUsers.filter((sel) => sel._id!==deletUser._id))
