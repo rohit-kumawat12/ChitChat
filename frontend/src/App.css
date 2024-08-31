@@ -30,3 +30,12 @@
     width: 44%;
     text-align: center;;
 }
+
+
+/* CSS For Message Box */
+.messages{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
