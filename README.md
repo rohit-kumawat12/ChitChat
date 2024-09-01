@@ -34,7 +34,7 @@ Connectify is a real-time chat application that allows users to communicate thro
 - Socket.io for real-time communication
 
 ## Project Structure
-```http
+```plaintext
 Connectify/
 ├── frontend/
 │   ├── public/
@@ -67,34 +67,34 @@ Connectify/
 
 ### Backend Setup:
 - Navigate to the server directory:
-```http
+```plaintext
 cd Connectify/server
 ```
 - Install the backend dependencies:
-```http
+```plaintext
 npm install
 ```
 - Create a .env file in the server directory with the following environment variables:
-```http
+```plaintext
 MONGO_URI=your_mongo_db_uri
 JWT_SECRET=your_jwt_secret
 ```
 - Start the backend server:
-```http
+```plaintext
 npm start
 ```
 
 ### Frontend Setup:
 - Navigate to the frontend directory:
-```http
+```plaintext
 cd Connectify/frontend
 ```
 - Install the frontend dependencies:
-```http
+```plaintext
 npm install
 ```
 - Start the frontend server:
-```http
+```plaintext
 npm start
 ``` 
 ## Contributing
