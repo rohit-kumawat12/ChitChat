@@ -40,3 +40,12 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--myyellow); 
 }
+
+.custom-badge {
+    animation: none !important; /* Remove any animation effects */
+    width: 16px !important;      /* Adjust width */
+    height: 16px !important;     /* Adjust height */
+    font-size: 10px !important;  /* Adjust font size */
+    background-color: red !important; /* Customize background color if needed */
+    color: white !important;     /* Customize text color if needed */
+}

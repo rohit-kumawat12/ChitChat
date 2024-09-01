@@ -89,8 +89,6 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
                     Authorization: `Bearer ${user.token}`   
                     },   
                 };
-                console.log(selectedChat._id);
-                console.log(groupChatName);
                 const { data } = await axios.put(`http://localhost:4500/api/chat/renamegroup`,{
                     chatID: selectedChat._id,
                     chatName: groupChatName
@@ -201,6 +199,7 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
         <>
         <IconButton 
             display={{base:"flex"}}
+            bg="white"
             icon={<ViewIcon/>}
             onClick={onOpen}
         />
@@ -237,6 +236,10 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
                 <Input 
                     placeholder="Chat Name"
                     mb={3}
+                    color="var(--myblack)"
+                    borderColor="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)"
                     value={groupChatName}
                     onChange={(e) => setGroupChatName(e.target.value)}
                 />
@@ -244,6 +247,10 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
                     variant="solid"
                     colorScheme="teal"
                     ml={1}
+                    color="var(--myyellow)"
+                    bg="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)"
                     isLoading={renameLoading}
                     onClick={handleRename}
                 >
@@ -252,7 +259,11 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
 
             </FormControl>
             <FormControl>
-              <Input placeholder="Add Users.." mb={1} onChange={(e)=> handleSearch(e.target.value)}/>
+              <Input placeholder="Add Users.."
+                    color="var(--myblack)"
+                    borderColor="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)" mb={1} onChange={(e)=> handleSearch(e.target.value)}/>
             </FormControl>
             {loading?(
                 <Spinner size="lg" />
@@ -267,7 +278,10 @@ const UpdateGroupChatModal = ({fetchAgain, setFetchAgain, fetchMessages}) => {
             )}
           </ModalBody>
           <ModalFooter>
-            <Button onClick={()=> handleRemove(user)} colorScheme="red">
+            <Button color="var(--myyellow)"
+                    bg="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)" onClick={()=> handleRemove(user)}>
                 Leave Group
             </Button>
           </ModalFooter>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Tooltip,Text, Menu, MenuButton, Avatar, MenuList, MenuItem, MenuDivider, useDisclosure, Input, useToast, Spinner } from "@chakra-ui/react";
+import { Box, Button, Tooltip,Text, Menu, MenuButton, Avatar, MenuList, MenuItem, MenuDivider, useDisclosure, Input, useToast, Spinner, Badge } from "@chakra-ui/react";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { ChatState } from "../../context/ChatProvider";
 import ProfileModal from "./ProfileModal";
@@ -14,6 +14,7 @@ import {
     DrawerContent,
 } from '@chakra-ui/react'
 import axios from "axios";
+import { getSender } from "../../config/ChatLogics";
 
 const SideDrawer = () =>{
     const [search, setSearch] = useState("");
@@ -21,7 +22,7 @@ const SideDrawer = () =>{
     const [loading, setLoading] = useState(false);
     const [loadingChat, setLoadingChat] = useState(false);
 
-    const { user, setSelectedChat, chats, setChats } = ChatState();
+    const { user, setSelectedChat, chats, setChats, notification, setNotification } = ChatState();
     const navigate = useNavigate();
     const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -82,7 +83,6 @@ const SideDrawer = () =>{
             const {data} = await axios.post(`http://localhost:4500/api/chat`,{userId},config);
 
             if (!Array.isArray(chats)) {
-                console.error("Chats is not an array:", chats);
                 setChats([]);
             }
 
@@ -128,15 +128,48 @@ const SideDrawer = () =>{
             </Text>
             <div>
                 <Menu>
-                    <MenuButton>
+                    <MenuButton position="relative" mr={2}>
+                        {/* <NotificationBadge
+                            count={notification.length}
+                        /> */}
+                        {notification.length > 0 && (
+                            <Badge
+                                position="absolute"
+                                top="1"
+                                right="1"
+                                transform="translate(25%, -25%)"
+                                fontSize="0.6em"
+                                width="16px"
+                                height="16px"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                bg="white"
+                                borderRadius="full"
+                                zIndex={9}
+                            >
+                                {notification.length}
+                            </Badge>
+                        )}
                         <BellIcon fontSize="2xl" color="var(--myblack)" m={1}/>
                     </MenuButton>
+                    <MenuList pl={2} bg="var(--myblack)" color="var(--myyellow)" borderColor="var(--myyellow)">
+                        {!notification.length && "No New Messages"}
+                        {notification.map((notif) => (
+                            <MenuItem pl={-2} bg="var(--myblack)" key={notif._id} onClick={()=>{
+                                setSelectedChat(notif.chat);
+                                setNotification(notification.filter((n)=>n._id!==notif._id));
+                            }}>
+                                {notif.chat.isGroupChat?`New Message in ${notif.chat.chatName}`:`New Message from ${getSender(user, notif.chat.users)}`}
+                            </MenuItem>
+                        ))}
+                    </MenuList>
                 </Menu>
                 <Menu>
                     <MenuButton bg="var(--myblack)" _hover={{ bg: "var(--myblack)" }} _active={{ bg: "var(--myblack)" }} as={Button} color="var(--myyellow)" rightIcon={<ChevronDownIcon/>}>
                         <Avatar size='sm' cursor="pointer" name={user.name} src={user.pic} />
                     </MenuButton>
-                    <MenuList  bg="var(--myblack)">
+                    <MenuList  bg="var(--myblack)" borderColor="var(--myyellow)">
                         <ProfileModal user={user}>
                             <MenuItem bg="var(--myblack)" color="var(--myyellow)">My Profile</MenuItem>
                         </ProfileModal>

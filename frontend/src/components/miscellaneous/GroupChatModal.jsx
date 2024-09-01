@@ -145,10 +145,10 @@ const GroupChatModal = ({children}) => {
             justifyContent="space-between"
           >
             <FormControl>
-              <Input placeholder="Chat Name" mb={3} onChange={(e)=> setGroupChatName(e.target.value)}/>
+              <Input color="var(--myblack)" borderColor="var(--myblack)" _hover="var(--myblack)" _focusVisible="var(--myblack)" placeholder="Chat Name" mb={3} onChange={(e)=> setGroupChatName(e.target.value)}/>
             </FormControl>
             <FormControl>
-              <Input placeholder="Add Users.." mb={1} onChange={(e)=> handleSearch(e.target.value)}/>
+              <Input color="var(--myblack)" borderColor="var(--myblack)" _hover="var(--myblack)" _focusVisible="var(--myblack)" placeholder="Add Users.." mb={1} onChange={(e)=> handleSearch(e.target.value)}/>
             </FormControl>
             <Box
               display="flex"
@@ -166,7 +166,10 @@ const GroupChatModal = ({children}) => {
             ) }
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleSubmit}>
+            <Button color="var(--myyellow)"
+                    bg="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)" onClick={handleSubmit}>
               Create Chat
             </Button>
           </ModalFooter>

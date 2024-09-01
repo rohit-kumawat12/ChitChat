@@ -71,8 +71,11 @@ const Login = () =>{
                 <FormLabel>Email</FormLabel>
                 <Input
                     placeholder='Enter Email..'
+                    color="var(--myblack)"
+                    borderColor="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)"
                     onChange={(e)=>setEmail(e.target.value)}
-                    color={'--var(myblack)'}
                     sx={{ borderColor: '--var(myblack)' }}
                 />
             </FormControl>
@@ -83,8 +86,11 @@ const Login = () =>{
                     <Input
                         type={show?"text":"password"}
                         placeholder='Enter Password..'
+                        color="var(--myblack)"
+                        borderColor="var(--myblack)"
+                        _hover="var(--myblack)"
+                        _focusVisible="var(--myblack)"
                         onChange={(e)=>setPassword(e.target.value)}
-                        color={'--var(myblack)'}
                         sx={{ borderColor: '--var(myblack)' }}
                     />
                     <InputRightElement width="4.5rem">

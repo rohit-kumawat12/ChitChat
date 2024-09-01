@@ -136,7 +136,10 @@ const Signup = () =>{
                 <Input
                     placeholder='Enter Name..'
                     onChange={(e)=>setName(e.target.value)}
-                    color={'--var(myblack)'}
+                    color="var(--myblack)"
+                    borderColor="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)"
                     sx={{ borderColor: '--var(myblack)' }}
                 />
             </FormControl>
@@ -146,7 +149,10 @@ const Signup = () =>{
                 <Input
                     placeholder='Enter Email..'
                     onChange={(e)=>setEmail(e.target.value)}
-                    color={'--var(myblack)'}
+                    color="var(--myblack)"
+                    borderColor="var(--myblack)"
+                    _hover="var(--myblack)"
+                    _focusVisible="var(--myblack)"
                     sx={{ borderColor: '--var(myblack)' }}
                 />
             </FormControl>
@@ -158,7 +164,10 @@ const Signup = () =>{
                         type={show?"text":"password"}
                         placeholder='Enter Password..'
                         onChange={(e)=>setPassword(e.target.value)}
-                        color={'--var(myblack)'}
+                        color="var(--myblack)"
+                        borderColor="var(--myblack)"
+                        _hover="var(--myblack)"
+                        _focusVisible="var(--myblack)"
                         sx={{ borderColor: '--var(myblack)' }}
                     />
                     <InputRightElement width="4.5rem">
@@ -177,7 +186,10 @@ const Signup = () =>{
                         type={show?"text":"password"}
                         placeholder='Confirm Password'
                         onChange={(e)=>setConfirmpassword(e.target.value)}
-                        color={'--var(myblack)'}
+                        color="var(--myblack)"
+                        borderColor="var(--myblack)"
+                        _hover="var(--myblack)"
+                        _focusVisible="var(--myblack)"
                         sx={{ borderColor: '--var(myblack)' }}
                     />
                     <InputRightElement width="4.5rem">

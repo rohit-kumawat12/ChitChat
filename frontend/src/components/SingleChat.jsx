@@ -9,13 +9,14 @@ import { useState } from "react";
 import axios from "axios";
 import ScrollableChat from "../components/ScrollableChat";
 import io from "socket.io-client";
+import loadingIcon from "../images/loadingIcon.webm";
 
 const ENDPOINT = "http://localhost:4500";
 var socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain, setFetchAgain}) => {
 
-    const { user, selectedChat, setSelectedChat} = ChatState();
+    const { user, selectedChat, setSelectedChat, notification, setNotification } = ChatState();
 
     const [messages, setMessages] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -111,10 +112,10 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
     useEffect(()=>{
         socket.on("message received", (newMessageReceived) => {
             if (!selectedChatCompare || selectedChatCompare._id !== newMessageReceived.chat._id){
-            //   if (!notification.includes(newMessageReceived)) {
-            //     setNotification([newMessageReceived, ...notification]);
-            //     setFetchAgain(!fetchAgain);
-            //   }
+              if (!notification.includes(newMessageReceived)) {
+                setNotification([newMessageReceived, ...notification]);
+                setFetchAgain(!fetchAgain);
+              }
             } else {
               setMessages([...messages, newMessageReceived]);
             }
@@ -151,7 +152,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
                     pb={3}
                     px={2}
                     fontFamily="Work sans"
-                    color="gray.500"
+                    color="var(--myblack)"
                     w="100%"
                     display="flex"
                     justifyContent={{base:"space-between"}}
@@ -160,6 +161,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
                 >
                     <IconButton
                         display={{base:"flex", md:"none"}}
+                        bg="white"
                         icon={<ArrowBackIcon />}
                         onClick={() => setSelectedChat("")}
                     />
@@ -206,11 +208,22 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
                     )}
 
                     <FormControl onKeyDown={sendMessage} isRequired mt={3}>
-                        {isTyping?(<div style={{color:"black"}}>Loading...</div>):(<></>)}
+                        {isTyping?(<div style={{color:"black"}}>
+                            <video
+                                src={loadingIcon}
+                                autoPlay
+                                loop
+                                muted
+                                style={{ width: "50px", height: "50px" }} // Adjust size as needed
+                            />
+                        </div>):(<></>)}
                         <Input 
                             variant="filled"
                             bg="white"
                             color="var(--myblack)"
+                            borderColor="var(--myblack)"
+                            _hover="var(--myblack)"
+                            _focusVisible="var(--myblack)"
                             placeholder="Enter a message.."
                             autoComplete="off"
                             onChange={typingHandler}
