@@ -35,7 +35,7 @@ Connectify is a real-time chat application that allows users to communicate thro
 
 ## Project Structure
 ```http
-  Connectify/
+Connectify/
 ├── frontend/
 │   ├── public/
 │   ├── src/
