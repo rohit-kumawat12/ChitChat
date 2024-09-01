@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FormControl, useDisclosure, Input, useToast, Box, position } from "@chakra-ui/react";
+import { FormControl, useDisclosure, Input, useToast, Box } from "@chakra-ui/react";
 import { ChatState } from "../../context/ChatProvider";
 import {
     Modal,
