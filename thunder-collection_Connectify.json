@@ -1,0 +1,267 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Connectify",
+    "collectionId": "1814b335-f163-489a-adef-3115c3743ced",
+    "dateExported": "2024-09-01T09:26:00.708Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "0a3b286f-e04a-4698-a026-d4492abcb625",
+            "name": "User",
+            "created": "2024-07-25T11:40:52.197Z",
+            "sortNum": 10000,
+            "containerId": "",
+            "folderPath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/user"
+        },
+        {
+            "_id": "06534912-df58-445f-826f-c870f2985752",
+            "name": "Chats",
+            "created": "2024-07-26T19:13:52.760Z",
+            "sortNum": 20000,
+            "containerId": "",
+            "folderPath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats"
+        },
+        {
+            "_id": "80d22d1f-90fe-4263-9579-d7f4f8c76fd7",
+            "name": "Messages",
+            "created": "2024-08-31T10:03:50.671Z",
+            "sortNum": 30000,
+            "containerId": "",
+            "folderPath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/messages"
+        }
+    ],
+    "requests": [
+        {
+            "_id": "bd299aec-3030-4c02-b8d9-8474a06c55e6",
+            "name": "registerUser",
+            "url": "http://localhost:4500/api/user/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-07-25T11:40:54.544Z",
+            "modified": "2024-07-29T17:21:08.360Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Rohit3\",\n  \"email\":\"rohit3@gmail.com\",\n  \"password\":\"123456789\"\n}",
+                "form": []
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/user/register-user.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "0a3b286f-e04a-4698-a026-d4492abcb625"
+        },
+        {
+            "_id": "88eb47ea-d8f6-46be-a06c-be8571280da8",
+            "name": "login",
+            "url": "http://localhost:4500/api/user/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-07-25T12:13:32.523Z",
+            "modified": "2024-07-25T12:17:14.179Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"rohit@gmail.com\",\n  \"password\":\"123456789\"\n}",
+                "form": []
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/user/login.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "0a3b286f-e04a-4698-a026-d4492abcb625"
+        },
+        {
+            "_id": "36f27570-df26-4a07-8c41-9565ac4fa3f4",
+            "name": "search user",
+            "url": "http://localhost:4500/api/user?search=rohit",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-07-26T18:07:23.120Z",
+            "modified": "2024-07-29T10:13:07.695Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "search",
+                    "value": "rohit",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/user/search-user.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "0a3b286f-e04a-4698-a026-d4492abcb625"
+        },
+        {
+            "_id": "40672a35-2e30-4c63-99c8-c44a03fc699e",
+            "name": "Create or Access a one on one chat",
+            "url": "http://localhost:4500/api/chat",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-07-26T19:14:27.177Z",
+            "modified": "2024-07-26T19:16:43.482Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\":\"66a3e7b1c94e78da75972e8c\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/create-or-access-a-one-on-one-chat.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "0ae970e5-7722-4647-8a03-a61fcdc4a2e6",
+            "name": "Fetching Chats",
+            "url": "http://localhost:4500/api/chat",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-07-26T19:27:57.908Z",
+            "modified": "2024-08-31T10:13:01.723Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\":\"66a3e7b1c94e78da75972e8c\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyNTA5OTE1NSwiZXhwIjoxNzI3NjkxMTU1fQ.To-T361r5oFBekewr8VEwXgl2LPuSKGmH788MEsCxXs"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/fetching-chats-2.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "8ed8e63e-73bb-474e-a92c-983a52426f68",
+            "name": "Create a group",
+            "url": "http://localhost:4500/api/chat/group",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-07-29T10:11:36.475Z",
+            "modified": "2024-07-29T16:55:59.538Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Test Group22\",\n  \"users\":\"[\\\"66a3e7b1c94e78da75972e8c\\\",\\\"66a76b41f37e9ab8faea758e\\\"]\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/create-a-group.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "5dcdca6c-573b-4dc2-8143-b104565bacff",
+            "name": "Rename the group",
+            "url": "http://localhost:4500/api/chat/renamegroup",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-07-29T16:53:07.280Z",
+            "modified": "2024-07-29T16:56:45.823Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"chatID\":\"66a7c99fbcdd76876670b931\",\n  \"chatName\":\"new name\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/rename-the-group.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "5dbf649e-e4f3-4038-b99a-d3f3c25d59dc",
+            "name": "Add user to group",
+            "url": "http://localhost:4500/api/chat/addtogroup",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-07-29T17:07:16.158Z",
+            "modified": "2024-07-29T17:21:16.397Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"chatID\":\"66a7c99fbcdd76876670b931\",\n  \"userID\":\"66a7cf83e08ee49f7d51b138\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/add-user-to-group.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "9195a505-009f-457a-91c9-a09753ce427c",
+            "name": "Remove user from group",
+            "url": "http://localhost:4500/api/chat/removefromgroup",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2024-07-29T17:07:18.743Z",
+            "modified": "2024-07-29T17:23:34.528Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"chatID\":\"66a7c99fbcdd76876670b931\",\n  \"userID\":\"66a7cf83e08ee49f7d51b138\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyMjAxODQzMCwiZXhwIjoxNzI0NjEwNDMwfQ.SaKLcjXo3PFXMczLCQfi9X3l0rkreMowPZyFj-2snV4"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/chats/remove-user-from-group.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "06534912-df58-445f-826f-c870f2985752"
+        },
+        {
+            "_id": "8a825340-8858-4fc9-af13-b0ba552a2148",
+            "name": "Sending a new Message",
+            "url": "http://localhost:4500/api/message",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-08-31T10:04:23.388Z",
+            "modified": "2024-08-31T10:22:28.880Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\":\"This is second Message\",\n  \"chatId\":\"66cc2af8a62c86ba3b643203\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyNTA5OTE1NSwiZXhwIjoxNzI3NjkxMTU1fQ.To-T361r5oFBekewr8VEwXgl2LPuSKGmH788MEsCxXs"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/messages/sending-a-new-message.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "80d22d1f-90fe-4263-9579-d7f4f8c76fd7"
+        },
+        {
+            "_id": "bb1fd868-be72-43c5-b23d-38adc6b88a3f",
+            "name": "Fetch All Messages for a chat",
+            "url": "http://localhost:4500/api/message/66cc2af8a62c86ba3b643203",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-08-31T10:20:23.481Z",
+            "modified": "2024-08-31T10:21:59.393Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YTI1ZTBhOGJhNDQ3NjAwZDViNmExZCIsImlhdCI6MTcyNTA5OTE1NSwiZXhwIjoxNzI3NjkxMTU1fQ.To-T361r5oFBekewr8VEwXgl2LPuSKGmH788MEsCxXs"
+            },
+            "filePath": "c:/Users/Rohit/AppData/Roaming/Code/User/globalStorage/rangav.vscode-thunder-client/collections/connectify/messages/fetch-all-messages-for-a-chat.json",
+            "colId": "1814b335-f163-489a-adef-3115c3743ced",
+            "containerId": "80d22d1f-90fe-4263-9579-d7f4f8c76fd7"
+        }
+    ],
+    "ref": "rkCSFmia-a_-HzEOLVKMupqYHhLZOhXdWd5RTxkcWdQS2BHz5OXTn58DFDIB0cOE83Wuebfml-xkPxg-GRyXMQ"
+}
