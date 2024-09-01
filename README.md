@@ -1,4 +1,4 @@
-# Connectify
+# Connectify - MERN Chat Application
 
 Connectify is a real-time chat application that allows users to communicate through text messages. It features group chat functionality, user authentication, and a responsive UI.
 
